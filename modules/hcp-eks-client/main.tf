@@ -45,6 +45,7 @@ resource "helm_release" "consul" {
   repository = "https://helm.releases.hashicorp.com"
   version    = var.chart_version
   chart      = "consul"
+  namespace  = var.namespace
 
   values = [local.helm_vaues]
 

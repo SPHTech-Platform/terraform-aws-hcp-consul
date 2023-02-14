@@ -46,6 +46,12 @@ variable "chart_version" {
   default     = "1.0.0"
 }
 
+variable "namespace" {
+  description = "Chart namespace"
+  type        = string
+  default     = "default"
+}
+
 variable "gossip_encryption_key" {
   type        = string
   description = "The gossip encryption key of the Consul cluster. Not required for chart_version >= 1.0.0."
