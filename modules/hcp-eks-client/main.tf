@@ -41,11 +41,12 @@ resource "kubernetes_secret" "consul_secrets" {
 }
 
 resource "helm_release" "consul" {
-  name       = "consul"
-  repository = "https://helm.releases.hashicorp.com"
-  version    = var.chart_version
-  chart      = "consul"
-  namespace  = var.namespace
+  name             = "consul"
+  repository       = "https://helm.releases.hashicorp.com"
+  version          = var.chart_version
+  chart            = "consul"
+  namespace        = var.namespace
+  create_namespace = var.create_namespace
 
   values = [local.helm_vaues]
 

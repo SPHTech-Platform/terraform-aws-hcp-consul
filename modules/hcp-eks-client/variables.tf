@@ -52,6 +52,12 @@ variable "namespace" {
   default     = "default"
 }
 
+variable "create_namespace" {
+  description = "Create namespace"
+  type        = bool
+  default     = false
+}
+
 variable "gossip_encryption_key" {
   type        = string
   description = "The gossip encryption key of the Consul cluster. Not required for chart_version >= 1.0.0."
